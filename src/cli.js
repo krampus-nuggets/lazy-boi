@@ -26,3 +26,5 @@ function parseArgToOpt(rawArgs) {
     }
 }
 
+// Process missing options | if - lazy-boi is executed without arguments
+async function promtMissOpt(options) {
