@@ -58,3 +58,16 @@ async function promtMissOpt(options) {
         console.log("%s Invalid argument value", chalk.red.bold("ERROR -")),
         process.exit(1)
     }
+
+    // Initialize as Git Repository
+    if (!options.git) {
+        questions.push(
+            {
+                type: "confirm",
+                name: "git",
+                message: "Initialize as git repository?",
+                default: false
+            }
+        )
+    }
+
