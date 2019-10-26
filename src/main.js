@@ -13,3 +13,10 @@ const access = promisify(fs.access);
 // Convert to ncp to Async Function | Assign to copy variable
 const copy = promisify(ncp);
 
+// Asynchronous File-Copy function
+async function copyTemplateFiles(options) {
+    return copy(options.templateDirectory, options.targetDirectory, {
+        clobber: false
+    })
+}
+
