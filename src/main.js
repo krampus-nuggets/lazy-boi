@@ -80,3 +80,11 @@ export async function createProject(options) {
         }
     ]);
 
+    // Execute
+    try {
+        await task.run()
+    }
+    catch (error) {
+        console.log(error)
+    }
+
