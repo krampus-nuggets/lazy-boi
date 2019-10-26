@@ -38,3 +38,6 @@ async function promtMissOpt(options) {
         }
     }
 
+    // Store values in array | Templates & Git below
+    const questions = [];
+
