@@ -10,3 +10,6 @@ import { projectInstall } from 'pkg-install';
 // Convert to fs.access to Async Function | Assign to access variable
 const access = promisify(fs.access);
 
+// Convert to ncp to Async Function | Assign to copy variable
+const copy = promisify(ncp);
+
