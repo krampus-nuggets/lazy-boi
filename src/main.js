@@ -88,3 +88,5 @@ export async function createProject(options) {
         console.log(error)
     }
 
+    console.log("%s Project Now Ready", chalk.green.bold("COMPLETE -"))
+}
