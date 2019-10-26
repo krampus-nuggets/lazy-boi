@@ -51,3 +51,12 @@ export async function createProject(options) {
     // Set template directory
     options.templateDirectory = templateDir;
 
+    // Validate direcotry
+    try {
+        await access(templateDir, fs.constants.R_OK)
+    }
+    catch (error) {
+        console.error("%s Invalid template name", chalk.red.bold("ERROR -"));
+        process.exit(1)
+    }
+
