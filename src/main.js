@@ -48,3 +48,6 @@ export async function createProject(options) {
         options.template
     );
 
+    // Set template directory
+    options.templateDirectory = templateDir;
+
