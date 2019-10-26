@@ -14,5 +14,5 @@ A CLI for installing project templates for multiple libraries and frameworks
 ## Note The Following
 
 1. Currently only tested on Windows OS, sooooooooo🤷🏽‍♂️
-2. Templates that are installed are not from original providers they are specifically catered towards my programming/building style thus this projects in also customizable for your own style👨🏽‍🏭
+2. Templates that are installed are not from original providers they are specifically catered towards my programming/building style thus this project is also customizable for your own style👨🏽‍🏭
 3. Also, because of point 2 above packages can be outdated🤾🏽‍♂️
