@@ -33,3 +33,9 @@ async function initGit(options) {
     return
 }
 
+export async function createProject(options) {
+    options = {
+        ...options,
+        targetDirectory: options.targetDirectory || process.cwd()
+    }
+
