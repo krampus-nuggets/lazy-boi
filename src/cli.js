@@ -30,3 +30,11 @@ function parseArgToOpt(rawArgs) {
 async function promtMissOpt(options) {
     const defaultTemplate = "JavaScript";
 
+    // Apply default options
+    if (options.skipPrompts) {
+        return {
+            ...options,
+            template: options.template || defaultTemplate
+        }
+    }
+
