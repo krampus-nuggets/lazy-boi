@@ -60,3 +60,23 @@ export async function createProject(options) {
         process.exit(1)
     }
 
+    // Define lazy-boi execution process | Dependant on arguments
+    const task = new Listr([
+        {
+            title: "Now copying files...",
+            task: () => copyTemplateFiles(options)
+        },
+        {
+            title: "Initializing git...",
+            task: () => initGit(options),
+            enabled: () => options.git
+        },
+        {
+            title: "Installing dependencies...",
+            task: () => projectInstall({ cwd: options.targetDirectory }),
+            skip: () => !options.runInstall
+                ? "Pass --install to automatically install all required template dependencies"
+                : undefined
+        }
+    ]);
+
