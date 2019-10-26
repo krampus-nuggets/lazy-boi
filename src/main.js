@@ -39,3 +39,5 @@ export async function createProject(options) {
         targetDirectory: options.targetDirectory || process.cwd()
     }
 
+    const currentFileURL = import.meta.url;
+
