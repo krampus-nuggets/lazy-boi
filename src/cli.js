@@ -71,3 +71,4 @@ async function promtMissOpt(options) {
         )
     }
 
+    const answers = await inquirer.prompt(questions);
