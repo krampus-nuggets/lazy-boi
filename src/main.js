@@ -41,3 +41,10 @@ export async function createProject(options) {
 
     const currentFileURL = import.meta.url;
 
+    // Define template directory
+    const templateDir = path.resolve(
+        new URL(currentFileURL).pathname.substring(new URL(currentFileURL).pathname.indexOf("/")+1),
+        "../../templates",
+        options.template
+    );
+
