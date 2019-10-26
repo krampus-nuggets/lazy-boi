@@ -18,6 +18,11 @@
     "lazy-boi",
     "krampus-nuggets"
   ],
+  "files": [
+    "bin/",
+    "src",
+    "templates"
+  ],
   "author": "krampus-nuggets",
   "license": "MIT",
   "dependencies": {
