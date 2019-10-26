@@ -41,3 +41,20 @@ async function promtMissOpt(options) {
     // Store values in array | Templates & Git below
     const questions = [];
 
+    /* Additional options accepted by CLI */
+    // Template options accepted as arguments
+    if (!options.template) {
+        questions.push(
+            {
+                type: "list",
+                name: "template",
+                message: "Please choose a project template:",
+                choices: ["JavaScript", "ReactJS", "VueJS"],
+                default: defaultTemplate
+            }
+        )
+    }
+    else {
+        console.log("%s Invalid argument value", chalk.red.bold("ERROR -")),
+        process.exit(1)
+    }
