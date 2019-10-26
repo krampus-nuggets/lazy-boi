@@ -3,3 +3,26 @@ import inquirer from "inquirer";
 import chalk from 'chalk';
 import { createProject } from "./main";
 
+// Process CLI arguments
+function parseArgToOpt(rawArgs) {
+    const args = arg(
+        {
+            "--git": Boolean,
+            "--yes": Boolean,
+            "--install": Boolean,
+            "-g": "--git",
+            "-y": "--yes",
+            "-i": "--install"
+        },
+        {
+            argv: rawArgs.splice(2)
+        }
+    );
+    return {
+        skipPrompts: args["--yes"] || false,
+        git: args["--git"] || false,
+        template: args._[0],
+        runInstall: args["--install"] || false
+    }
+}
+
