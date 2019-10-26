@@ -72,3 +72,16 @@ async function promtMissOpt(options) {
     }
 
     const answers = await inquirer.prompt(questions);
+
+    return {
+        ...options,
+        template: options.template || answers.template,
+        git: options.git || answers.git
+    }
+}
+
+export async function cli(args) {
+    let options = parseArgToOpt(args);
+    options = await promtMissOpt(options),
+    await createProject(options)
+}
