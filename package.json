@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "CLI for installing project templates for different libraries and frameworks",
   "main": "src/index.js",
+  "repository": "https://github.com/krampus-nuggets/lazy-boi",
   "bin": {
     "@krampus-nuggets/lazy-boi": "bin/lazy-boi",
     "lazy-boi": "bin/lazy-boi"
